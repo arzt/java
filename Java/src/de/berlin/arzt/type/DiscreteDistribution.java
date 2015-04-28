@@ -47,6 +47,7 @@ public class DiscreteDistribution<E> extends HashMap<E, Double> {
 			double value = get(retval);
 			sum += value;
 		} while (p > sum && keys.hasNext());
+		assert(retval != null);
 		return retval;
 	}
 	
