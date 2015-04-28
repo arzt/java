@@ -30,12 +30,16 @@ public class DefaultCharProvider2 implements CharProvider {
 
 	@Override
 	public void penalize(char c) {
-		charSource.increment(c, 1);
+		charSource.muliply((int) c, 1.5);
+		System.out.println("Penalized: " + c);
+		System.out.println(charSource);
 	}
 	
 	@Override
 	public void reward(char c) {
-		charSource.increment(c, -1);
+		charSource.uniformize(0.1);
+		System.out.println("Rewarded: " + c);
+		System.out.println(charSource);
 	}
 
 }
